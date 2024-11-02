@@ -26,8 +26,8 @@ python main_flask.py
 - Extract it to the /Assets/StreamingAssets folder
 
 ### 2. Train Your Voice and Obtain an API Key from ElevenLabs ###
-- Get your API Key: ElevenLabs > Settings > [API KEYS](https://elevenlabs.io/app/settings/api-keys)
-- Get your Voice ID: ElevenLabs > Voices >  [ID](https://elevenlabs.io/app/voice-lab)
+- [Get your API Key](https://elevenlabs.io/app/settings/api-keys): ElevenLabs > Settings > API KEYS
+- [Get your Voice ID](https://elevenlabs.io/app/voice-lab): ElevenLabs > Voices > ID
 
 ### 3. Enter Your Voice ID and API Key ###
 - Select the Professor-Sean scene and find ElevenLabsManager in the Hierarchy window
