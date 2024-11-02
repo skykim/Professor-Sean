@@ -28,8 +28,8 @@ public class NPCManager : MonoBehaviour
 
     async void Start()
     {
-        string npcResponse = await SendPromptAsync("hello");
-        Debug.Log(npcResponse);
+        //string npcResponse = await SendPromptAsync("hello");
+        //Debug.Log(npcResponse);
     }
     
     private async void OnInputFieldEndEdit(string text)
