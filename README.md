@@ -13,11 +13,18 @@ Sogang Full Stack RAG Project
 pip install -r requirements.txt
 ```
 
-### 2. Launch RestAPI server ###
+### 2. Ingest PDF datasets into Vectorstore ###
+
+```
+python data_ingestion.py
+```
+
+### 3. Launch RestAPI server ###
 
 ```
 python main_flask.py
 ```
+
 
 ## Setup (Unity) ##
 
