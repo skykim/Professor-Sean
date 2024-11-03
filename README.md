@@ -46,4 +46,4 @@ python main_flask.py
 
 ## Contributors ##
 - Sogang University, Graduate Schoold of Metaverse
-- Sky (loenahmik@gmail.com), Wonyoung (wonnio98@gmail.com), Jonghwan(bjh0309@gmail.com)
+- Wonyoung Jeong (wonnio98@gmail.com), Jonghwan Bae (bjh0309@gmail.com), Sky Kim (loenahmik@gmail.com)
