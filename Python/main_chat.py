@@ -16,15 +16,7 @@ load_dotenv()
 session_id = uuid.uuid4()
 
 def load_vectorstore(persist_directory: str = "./chroma_db") -> Chroma:
-    """
-    저장된 Chroma 벡터스토어를 로드합니다.
     
-    Args:
-        persist_directory (str): 벡터스토어가 저장된 디렉토리 경로
-    
-    Returns:
-        Chroma: 로드된 벡터스토어 객체
-    """
     embedding_function = UpstageEmbeddings(
         model="solar-embedding-1-large"
     )
@@ -97,6 +89,6 @@ while True:
     answer = result["answer"]
     context = result["context"]
     
-    print("\n📍 답변:", answer)
-    print("📍 증거:", context)
+    print("\n답변:", answer)
+    print("증거:", context)
     print("\n")
