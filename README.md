@@ -1,5 +1,9 @@
 # Professor-Sean
-Sogang Full Stack RAG Project
+- Professor Sean: RAG-based Lecture Review and Interaction System in Unity
+- 2nd Place in Sogang x Upstage Full-Stack LLM Project
+- Special Thanks to Soo-Yong Park from Sogang University
+
+[![Professor Sean](https://img.youtube.com/vi/dfF_bsb1AG8/0.jpg)](https://www.youtube.com/watch?v=dfF_bsb1AG8)
 
 ## Requirements ##
 - Unity 2023.2.20f1
@@ -7,13 +11,19 @@ Sogang Full Stack RAG Project
 
 ## Setup (Python) ##
 
-### 1. Ingest PDF datasets into Vectorstore ###
+### 1. Get an Upstage API Key and Register an Environment Variable ###
+- [Upstage Console](https://console.upstage.ai/)
+```
+UPSTAGE_API_KEY = up_xxxxx
+```
+
+### 2. Ingest PDF datasets into Vectorstore (ChromaDB) ###
 
 ```
 python data_ingestion.py
 ```
 
-### 2. Launch RestAPI server ###
+### 3. Launch RestAPI Server ###
 
 ```
 python main_flask.py
@@ -27,9 +37,13 @@ python main_flask.py
 - Extract it to the /Assets/StreamingAssets folder
 
 ### 2. Train Your Voice and Obtain an API Key from ElevenLabs ###
-- [Get your API Key](https://elevenlabs.io/app/settings/api-keys): ElevenLabs > Settings > API KEYS
 - [Get your Voice ID](https://elevenlabs.io/app/voice-lab): ElevenLabs > Voices > ID
+- [Get your API Key](https://elevenlabs.io/app/settings/api-keys): ElevenLabs > Settings > API KEYS
 
 ### 3. Enter Your Voice ID and API Key ###
 - Select the Professor-Sean scene and find ElevenLabsManager in the Hierarchy window
 - Enter your Voice ID and API Key in the Inspector window
+
+## Contributors ##
+- Sogang University, Graduate Schoold of Metaverse
+- Sky (loenahmik@gmail.com), Wonyoung (wonnio98@gmail.com), Jonghwan(bjh0309@gmail.com)
