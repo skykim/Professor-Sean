@@ -2,6 +2,7 @@
 - Professor Sean: RAG-based Lecture Review and Interaction System in Unity
 - 2nd Place in Sogang x Upstage Full-Stack LLM Project
 - Special Thanks to Soo-Yong Park from Sogang University
+- [Slide](https://drive.google.com/file/d/1zYPt_5Q-8SDZpgqIKLU5ICKp9IU7s5bf/view?usp=sharing)
 
 [![Professor Sean](https://img.youtube.com/vi/dfF_bsb1AG8/0.jpg)](https://www.youtube.com/watch?v=dfF_bsb1AG8)
 
