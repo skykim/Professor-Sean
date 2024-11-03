@@ -10,17 +10,8 @@ from langchain_upstage import UpstageEmbeddings
 load_dotenv()
 api_key = os.getenv("UPSTAGE_API_KEY")
 
+#PDF 파일들로부터 Chroma 벡터스토어를 생성
 def create_vectorstore(pdf_directory: str, persist_directory: str = "./chroma_db") -> Chroma:
-    """
-    PDF 파일들로부터 Chroma 벡터스토어를 생성합니다.
-    
-    Args:
-        pdf_directory (str): PDF 파일들이 있는 디렉토리 경로
-        persist_directory (str): 벡터스토어를 저장할 디렉토리 경로
-    
-    Returns:
-        Chroma: 생성된 벡터스토어 객체
-    """
     # PDF 파일 목록 가져오기
     pdf_files = [
         os.path.join(pdf_directory, f) for f in os.listdir(pdf_directory)
@@ -62,16 +53,8 @@ def create_vectorstore(pdf_directory: str, persist_directory: str = "./chroma_db
     
     return vectorstore
 
+#저장된 Chroma 벡터스토어를 로드
 def load_vectorstore(persist_directory: str = "./chroma_db") -> Chroma:
-    """
-    저장된 Chroma 벡터스토어를 로드합니다.
-    
-    Args:
-        persist_directory (str): 벡터스토어가 저장된 디렉토리 경로
-    
-    Returns:
-        Chroma: 로드된 벡터스토어 객체
-    """
     embedding_function = UpstageEmbeddings(
         model="solar-embedding-1-large",
         api_key=api_key  # API 키 전달
