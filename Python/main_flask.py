@@ -7,6 +7,7 @@ from langchain_upstage import UpstageEmbeddings
 from langchain_chroma import Chroma
 from langchain.schema import Document
 import re
+from langchain_core.messages import HumanMessage
 from flask import Flask, request, jsonify
 from main_chat import load_vectorstore, create_rag_chain
 
@@ -14,6 +15,7 @@ app = Flask(__name__)
 rag_chain = None
 vectorstore = load_vectorstore("./chroma_db")
 rag_chain = create_rag_chain(vectorstore, os.getenv("UPSTAGE_API_KEY"))
+chat_history = []
 
 @app.route("/ask", methods=["POST"])
 def process_rag():
@@ -25,6 +27,8 @@ def process_rag():
     
     if question and rag_chain:
         result = rag_chain.invoke({"input": question, "chat_history": []})
+        #chat_history.extend([HumanMessage(content=question), result["answer"]])
+        
         answer = result["answer"]
         context = result["context"]
         
