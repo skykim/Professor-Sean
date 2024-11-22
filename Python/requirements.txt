@@ -1,0 +1,10 @@
+langchain>=0.3.6
+langchain-openai>=0.2.5 
+openai>=1.53.0
+chromadb>=0.5.17
+python-dotenv>=1.0.1
+pypdf>=4.3.1
+tiktoken>=0.8.0
+fastapi>=0.115.4
+uvicorn>=0.32.0
+pydantic>=2.9.2
